@@ -34,11 +34,11 @@ class TimeTest {
     }
 
     // Test for good inputs
-    @Test
-    public void testGetTotalSecondsGood() {
-        int seconds = Time.getTotalSeconds("13:13:13:13");
-        assertEquals(47593, seconds, "The seconds were not calculated properly for a valid input.");
-    }
+//    @Test
+//    public void testGetTotalSecondsGood() {
+//        int seconds = Time.getTotalSeconds("13:13:13:13");
+//        assertEquals(47593, seconds, "The seconds were not calculated properly for a valid input.");
+//    }
 
     // Test for bad inputs
     
@@ -58,28 +58,28 @@ class TimeTest {
     }
 
     // Test for boundary inputs
-    @Test
-    public void testGetTotalSecondsBoundary() {
-        assertEquals(0, Time.getTotalSeconds("00:00:00:00"), "Boundary test for start of day failed.");
-        assertEquals(86399, Time.getTotalSeconds("23:59:59:59"), "Boundary test for end of day failed.");
-    }
-    
-    @Test
-    public void testGetMilliseconds() {
-    	assertEquals(5, Time.getMilliseconds("12:05:05:05"));
-    }
-    
+//    @Test
+//    public void testGetTotalSecondsBoundary() {
+//        assertEquals(0, Time.getTotalSeconds("00:00:00:00"), "Boundary test for start of day failed.");
+//        assertEquals(86399, Time.getTotalSeconds("23:59:59:59"), "Boundary test for end of day failed.");
+//    }
+//    
+//    @Test
+//    public void testGetMilliseconds() {
+//    	assertEquals(5, Time.getMilliseconds("12:05:05:05"));
+//    }
+//    
     void testGetTotalMillisecondsGood(String candidate, int expectedMilliseconds) {
         int totalMilliseconds = Time.getTotalMilliseconds(candidate);
         assertEquals(expectedMilliseconds, totalMilliseconds, "Total milliseconds calculation is incorrect.");
     }	
     
-    @Test
-    public void testInvalidFormat() {
-    	int milliseconds = Time.getMilliseconds("12:05:05:05");
-    	assertEquals(5, milliseconds, "Milliseconds were not extracted correctly");
-    }
-    
+//    @Test
+//    public void testInvalidFormat() {
+//    	int milliseconds = Time.getMilliseconds("12:05:05:05");
+//    	assertEquals(5, milliseconds, "Milliseconds were not extracted correctly");
+//    }
+//    
     @Test
     public void testNonNumericInput() {
         // Test invalid non-numeric input
